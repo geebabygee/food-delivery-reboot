@@ -20,6 +20,10 @@ class MealRepository
     save_to_csv
   end
 
+  def find(id)
+    @meals.find {|meal| meal.id == id}
+  end
+
   private
 
   # CSV rows of strings ----> Meal Instances
